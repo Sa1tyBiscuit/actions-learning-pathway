@@ -1,0 +1,11 @@
+#  following a turoial on Building a workflow with GitHub Actions
+
+name: hello-world-python
+on: push # the push event runs your workflow when you push a commit or tag
+jobs: 
+  hello-world-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: python hello.py
